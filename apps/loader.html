@@ -1,0 +1,267 @@
+<!DOCTYPE html>
+
+<html lang="en">
+	<head>
+		<meta charset="utf-8" />
+		<title>Please Wait &raquo; Humble Toolbox</title>
+		<meta
+			name="viewport"
+			content="width=device-width, user-scalable=no, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0"
+		/>
+		<!-- Standard -->
+		<link
+			rel="shortcut icon"
+			href="https://ltscdn.m6.nz/labs/img/favicon-144.png"
+		/>
+		<!-- Retina iPad Touch Icon-->
+		<link
+			rel="apple-touch-icon"
+			sizes="144x144"
+			href="https://ltscdn.m6.nz/labs/img/favicon-144.png"
+		/>
+		<!-- Retina iPhone Touch Icon-->
+		<link
+			rel="apple-touch-icon"
+			sizes="114x114"
+			href="https://ltscdn.m6.nz/labs/img/favicon-114.png"
+		/>
+		<!-- Standard iPad Touch Icon-->
+		<link
+			rel="apple-touch-icon"
+			sizes="72x72"
+			href="https://ltscdn.m6.nz/labs/img/favicon-72.png"
+		/>
+		<!-- Standard iPhone Touch Icon-->
+		<link
+			rel="apple-touch-icon"
+			sizes="57x57"
+			href="https://ltscdn.m6.nz/labs/img/favicon-57.png"
+		/>
+
+		<!--  Resources style ================== -->
+		<link
+			href="https://ltscdn.m6.nz/labs/css/sunflower.css"
+			rel="stylesheet"
+			type="text/css"
+			media="all"
+		/>
+		<link
+			href="https://ltscdn.m6.nz/labs/css/custom.css"
+			rel="stylesheet"
+			type="text/css"
+			media="all"
+		/>
+		<style>
+			html {
+				overflow: hidden;
+			}
+		</style>
+	</head>
+
+	<body>
+		<section id="parent" class="animsition">
+			<div id="leftSide" class="color">
+				<div
+					id="home"
+					class="col-sm-8 col-sm-offset-2 col-xs-8 col-xs-offset-2"
+				>
+					<div class="h-content top-25">
+						<h1 class="mid animated fadeInUp mb30 m-heading fw700">
+							Hold on, <br />
+							we're just setting up. <br />
+						</h1>
+						<p
+							class="mid animated fadeInUp mb30 fw500"
+							id="statusText"
+						></p>
+					</div>
+
+					<div class="copyright quick fadeIn align-bottom fixed">
+						<p class="block fw400">&copy; 2020 - Theo M.</p>
+					</div>
+
+					<div class="vertical-result">
+						<div
+							id="subscribe-result"
+							class="vertical-result fixed col-sm-10 align-bottom"
+						></div>
+					</div>
+				</div>
+			</div>
+
+			<div id="rightSide" class="visible img-only">
+				<div class="scene">
+					<div class="wing-left"></div>
+					<div class="wing-right"></div>
+					<div class="exhaust"></div>
+					<div class="capsule">
+						<div class="top">
+							<div class="shadow"></div>
+						</div>
+						<div class="base"></div>
+					</div>
+					<div class="window-big"></div>
+					<div class="window-small"></div>
+					<div class="fire-1"></div>
+					<div class="fire-2"></div>
+					<div class="fire-3"></div>
+					<div class="fire-4"></div>
+					<div class="spark-1"></div>
+					<div class="spark-2"></div>
+					<div class="spark-3"></div>
+					<div class="spark-4"></div>
+					<div class="star star--1"></div>
+					<div class="star star--2"></div>
+					<div class="star star--3"></div>
+					<div class="star star--4"></div>
+					<div class="star star--5"></div>
+					<div class="star star--6"></div>
+					<div class="star star--7"></div>
+					<div class="star star--8"></div>
+					<div class="star star--9"></div>
+					<div class="star star--10"></div>
+					<div class="star star--11"></div>
+					<div class="star star--12"></div>
+					<div class="star star--13"></div>
+					<div class="star star--14"></div>
+					<div class="star star--15"></div>
+					<div class="star star--16"></div>
+				</div>
+			</div>
+		</section>
+
+		<script src="../assets/loader/js/jquery-1.11.3.min.js"></script>
+		<script>
+			window.jQuery = window.$ = module.exports
+			const edit = {
+				label: 'Edit',
+				submenu: [
+					{
+						label: 'Undo',
+						accelerator: 'CmdOrCtrl+Z',
+						role: 'undo',
+					},
+					{
+						label: 'Redo',
+						accelerator: 'Shift+CmdOrCtrl+Z',
+						role: 'redo',
+					},
+					{
+						type: 'separator',
+					},
+					{
+						label: 'Cut',
+						accelerator: 'CmdOrCtrl+X',
+						role: 'cut',
+					},
+					{
+						label: 'Copy',
+						accelerator: 'CmdOrCtrl+C',
+						role: 'copy',
+					},
+					{
+						label: 'Paste',
+						accelerator: 'CmdOrCtrl+V',
+						role: 'paste',
+					},
+					{
+						label: 'Select All',
+						accelerator: 'CmdOrCtrl+A',
+						role: 'selectAll',
+					},
+				],
+			}
+		</script>
+		<script src="../assets/loader/js/animsition.min.js"></script>
+		<script src="../assets/loader/js/bootstrap.min.js"></script>
+		<script src="../assets/loader/js/script.js"></script>
+		<script>
+			let appSettings = { hb_cookie: "" }
+			function dumpCookie(name, callback) {
+				const remote = require("electron").remote
+				const session = remote.session
+				session.defaultSession.cookies
+					.get({ name: "_simpleauth_sess" })
+					.then((cookies) => {
+						cookies.forEach(function (cookie) {
+							// check to make sure we're actually operating on the correct cookie...
+							if (cookie.name == name) {
+								callback(cookie.value)
+							}
+						})
+					})
+					.catch((error) => {
+						console.log(error)
+					})
+			}
+			function checkChildURL(url, win) {
+				console.log("CHECK")
+				if (win.webContents.getURL() == url) {
+					console.log("SUCCESS")
+					win.destroy()
+					dumpCookie("_simpleauth_sess", function (val) {
+						appSettings.hb_cookie = val
+						Object.freeze(appSettings)
+						$("#statusText").html(
+							"Logged in and found session token!"
+						)
+						setTimeout(function () {
+							$("#statusText").html("Loading the awesome...")
+							setTimeout(function () {
+								window.location =
+									"downloader.html#" + appSettings.hb_cookie
+							}, 1500)
+						}, 1500)
+					})
+				} else {
+					setTimeout(function () {
+						checkChildURL(url, win)
+					}, 250)
+				}
+			}
+
+			function createBrowserWindow(url, focussed, callback) {
+				const remote = require("electron").remote
+				const BrowserWindow = remote.BrowserWindow
+				const Menu = remote.Menu
+				var win
+					win = new BrowserWindow({
+						height: 600,
+						width: 800,
+						show: false,
+						minimizable: false,
+						maximizable: false,
+						fullscreen: false,
+						closable: true,
+					})
+				win.setMenu(Menu.buildFromTemplate([]))
+				win.loadURL(url)
+				win.once("ready-to-show", () => {
+					win.show()
+				})
+				if (focussed) {
+					win.focus()
+				}
+				callback(win)
+			}
+
+			$(function () {
+				$("#statusText").html("Logging you in to Humble Bundle...")
+				setTimeout(function () {
+					createBrowserWindow(
+						"https://humblebundle.com/login",
+						true,
+						function (win) {
+							setTimeout(function () {
+								checkChildURL(
+									"https://www.humblebundle.com/home",
+									win
+								)
+							}, 250)
+						}
+					)
+				}, 1000)
+			})
+		</script>
+	</body>
+</html>

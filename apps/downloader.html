@@ -1,0 +1,685 @@
+<!DOCTYPE html>
+<html>
+   <head>
+      <link
+         href="../assets/launcher/css/theme.min.css"
+         rel="stylesheet"
+         type="text/css"
+         media="all"
+         />
+      <link
+         href="../assets/launcher/css/custom.css"
+         rel="stylesheet"
+         type="text/css"
+         media="all"
+         />
+      <link
+         href="../assets/launcher/css/custom_dark.css"
+         rel="stylesheet"
+         type="text/css"
+         media="all"
+         />
+      <link
+         href="https://fonts.googleapis.com/css?family=Nunito:400,400i,600,700&display=swap"
+         rel="stylesheet"
+         />
+      <!-- Required scripts -->
+      <script
+         type="text/javascript"
+         src="../assets/launcher/js/jquery.min.js"
+         ></script>
+      <script
+         type="text/javascript"
+         src="../assets/launcher/js/popper.min.js"
+         ></script>
+      <script
+         type="text/javascript"
+         src="../assets/launcher/js/bootstrap.js"
+         ></script>
+      <script
+         type="text/javascript"
+         src="../assets/launcher/js/logout.js"
+         ></script>
+      <script>
+         window.jQuery = window.$ = module.exports
+      </script>
+      <title>Downloader &raquo; Humble Toolbox</title>
+   </head>
+   <body class="m-0 bg-gradient" style="min-height: 100vh">
+      <header>
+         <div class="navbar-container bg-white">
+            <nav class="navbar navbar-expand-lg navbar-light">
+               <div class="container" id="navbar-container">
+                  <a
+                     class="navbar-brand navbar-brand-dynamic-color fade-page"
+                     href="downloader.html"
+                     >
+                  <img
+                     alt="Humble Logo"
+                     src="../assets/launcher/img/flatlogo.png"
+                     style="width: 100px"
+                     />
+                  </a>
+                  <div class="d-flex align-items-center order-lg-3">
+                     <button
+                        aria-expanded="false"
+                        aria-label="Toggle navigation"
+                        class="navbar-toggler"
+                        data-target=".navbar-collapse"
+                        data-toggle="collapse"
+                        type="button"
+                        >
+                     <img
+                        alt="Navbar Toggler Open Icon"
+                        class="navbar-toggler-open icon icon-sm svg-filter-white"
+                        src="../assets/launcher/img/icons/interface/icon-menu.svg"
+                        />
+                     <img
+                        alt="Navbar Toggler Close Icon"
+                        class="navbar-toggler-close icon icon-sm svg-filter-white"
+                        src="../assets/launcher/img/icons/interface/icon-x.svg"
+                        />
+                     </button>
+                  </div>
+                  <div
+                     class="collapse navbar-collapse order-3 order-lg-2 justify-content-lg-end"
+                     id="navigation-menu"
+                     >
+                     <ul class="navbar-nav my-3 my-lg-0">
+                        <!--<li class="nav-item">
+                           <a
+                              href="launcher.html"
+                              class="nav-link nav-item nav-item-center-height text-body"
+                              >Apps</a
+                              >
+                        </li>-->
+                        <li class="nav-item">
+                           <a
+                              href="#"
+                              class="nav-link nav-item nav-item-center-height text-body"
+                              id="logout"
+                              >Logout</a
+                              >
+                        </li>
+                     </ul>
+                  </div>
+               </div>
+            </nav>
+         </div>
+      </header>
+      <main>
+         <div class="container mt-4 h-100">
+            <h1 class="h1 text-white text-center">Humble Downloader</h1>
+            <div class="card shadow bg-dark border-0">
+               <div
+                  class="card-header custom-item-bg-darker border-0 d-flex justify-content-between"
+                  >
+                  <div class="m-0 pr-5">
+                     <div class="w-100 d-flex justify-content-between">
+                        <h4
+                           class="h4 mb-0 text-link-active"
+                           style="line-height: 50px"
+                           data-target="#trove-slide"
+                           >
+                           Humble Trove Downloader
+                        </h4>
+                     </div>
+                  </div>
+                  <div class="m-0 pl-5 justify-content-end">
+                     <div class="w-100 d-flex justify-content-between">
+                        <h4
+                           class="h4 mb-0 text-link-inactive"
+                           style="line-height: 50px"
+                           data-target="#humble-slide"
+                           >
+                           <!-- Humble Bundle Downloader -->
+                        </h4>
+                     </div>
+                  </div>
+               </div>
+               <div class="card-header custom-item-bg-darker border-0">
+                  <div class="form-slidedown form-active" id="trove-slide" style="display: block;">
+                     <div
+                        class="form-group row justify-content-end"
+                        id="trove-form-div"
+                        >
+                        <div class="col-xs-12 col-lg-6">
+                           <div
+                              class="custom-control custom-switch mr-4"
+                              >
+                              <input
+                                 type="checkbox"
+                                 class="custom-control-input"
+                                 id="tlin-check"
+                                 />
+                              <label
+                                 class="custom-control-label"
+                                 for="tlin-check"
+                                 >Download Linux Apps</label
+                                 >
+                           </div>
+                           <div
+                              class="custom-control custom-switch mr-4"
+                              >
+                              <input
+                                 type="checkbox"
+                                 class="custom-control-input"
+                                 id="tmac-check"
+                                 />
+                              <label
+                                 class="custom-control-label"
+                                 for="tmac-check"
+                                 >Download macOS Apps</label
+                                 >
+                           </div>
+                           <div
+                              class="custom-control custom-switch mr-4"
+                              >
+                              <input
+                                 type="checkbox"
+                                 class="custom-control-input"
+                                 id="twin-check"
+                                 />
+                              <label
+                                 class="custom-control-label"
+                                 for="twin-check"
+                                 >Download Windows Apps</label
+                                 >
+                           </div>
+                           <div
+                              class="custom-control custom-switch mr-4"
+                              >
+                              <input
+                                 type="checkbox"
+                                 class="custom-control-input"
+                                 id="ttor-check"
+                                 />
+                              <label
+                                 class="custom-control-label"
+                                 for="ttor-check"
+                                 >Download Torrent Files</label
+                                 >
+                           </div>
+                           <div class="row pt-4">
+                              <input
+                                 type="button"
+                                 class="btn btn-info mr-2 humble-folder-selection"
+                                 id="tdir"
+                                 value="Choose Directory"
+                                 />
+                              <label
+                                 id="tdir_label"
+                                 class="col-form-label align-self-center"
+                                 >No Location Chosen</label
+                                 >
+                              <!-- 25 Characters MAX -->
+                           </div>
+                        </div>
+                        <div
+                           class="col-xs-12 col-lg-6 form-buttons flex-column"
+                           >
+                           <textarea
+                              class="form-control bg-transparent text-white humble-log"
+                              id="trove-log"
+                              readonly
+                              rows="3"
+                              ></textarea>
+                           <input
+                              type="button"
+                              class="btn btn-success mt-4"
+                              id="trove-submit"
+                              value="Start Downloading!"
+                              />
+                        </div>
+                     </div>
+                     <div>
+                        <div class="progress humble-progress">
+                           <div
+                              id="trove-download-progress"
+                              class="progress-bar progress-bar-striped bg-info progress-bar-animated"
+                              role="progressbar"
+                              style="width: 0%"
+                              aria-valuenow="0"
+                              aria-valuemin="0"
+                              aria-valuemax="100"
+                              ></div>
+                           <div class="humble-progress-label">
+                              Current Download
+                              <span
+                                 id="trove-download-progress-percent"
+                                 >0</span
+                                 >%
+                           </div>
+                        </div>
+                        <div class="progress humble-progress mt-4">
+                           <div
+                              id="trove-download-total-progress"
+                              class="progress-bar progress-bar-striped bg-success progress-bar-animated"
+                              role="progressbar"
+                              style="width: 0%"
+                              aria-valuenow="0"
+                              aria-valuemin="0"
+                              aria-valuemax="100"
+                              ></div>
+                           <div class="humble-progress-label">
+                              Total Downloaded
+                              <span
+                                 id="trove-download-total-completed"
+                                 >0</span
+                                 >/<span id="trove-download-total"
+                                 >0</span
+                                 >
+                           </div>
+                        </div>
+                     </div>
+                  </div>
+                  <div class="form-slidedown" id="humble-slide">
+                     <div
+                        class="form-group row justify-content-end"
+                        id="bundle-form-div"
+                        >
+                        <div class="col-xs-12 col-lg-6">
+                           <div
+                              class="custom-control custom-switch mr-4"
+                              >
+                              <input
+                                 type="checkbox"
+                                 class="custom-control-input"
+                                 id="blin-check"
+                                 />
+                              <label
+                                 class="custom-control-label"
+                                 for="blin-check"
+                                 >Download Linux Apps</label
+                                 >
+                           </div>
+                           <div
+                              class="custom-control custom-switch mr-4"
+                              >
+                              <input
+                                 type="checkbox"
+                                 class="custom-control-input"
+                                 id="bmac-check"
+                                 />
+                              <label
+                                 class="custom-control-label"
+                                 for="bmac-check"
+                                 >Download macOS Apps</label
+                                 >
+                           </div>
+                           <div
+                              class="custom-control custom-switch mr-4"
+                              >
+                              <input
+                                 type="checkbox"
+                                 class="custom-control-input"
+                                 id="bwin-check"
+                                 />
+                              <label
+                                 class="custom-control-label"
+                                 for="bwin-check"
+                                 >Download Windows Apps</label
+                                 >
+                           </div>
+                           <div
+                              class="custom-control custom-switch mr-4"
+                              >
+                              <input
+                                 type="checkbox"
+                                 class="custom-control-input"
+                                 id="btor-check"
+                                 />
+                              <label
+                                 class="custom-control-label"
+                                 for="btor-check"
+                                 >Download Torrent Files</label
+                                 >
+                           </div>
+                        </div>
+                        <div
+                           class="col-xs-12 col-lg-6 form-buttons flex-column"
+                           >
+                           <textarea
+                              class="form-control bg-transparent text-white humble-log"
+                              id="humble-trove-log"
+                              readonly
+                              rows="3"
+                              ></textarea>
+                           <input
+                              type="button"
+                              class="btn btn-success mt-4"
+                              id="humble-submit"
+                              value="Start Downloading!"
+                              />
+                        </div>
+                     </div>
+                  </div>
+               </div>
+            </div>
+         </div>
+      </main>
+      <script>
+         const { ipcRenderer } = require("electron")
+         ipcRenderer.on("progress", (event, progress) => {
+         		let percentageProgress = Math.floor(progress.percent * 100)
+         		$("#trove-download-progress-percent").text(
+         			percentageProgress
+         		)
+         		$("#trove-download-progress").width(
+         			`${percentageProgress}%`
+         		)
+         	})
+         
+         ipcRenderer.on("complete", (event, file) => {
+         	appSettings.downloadLock = false
+         })
+         
+         ipcRenderer.on("error", (event, err) => {
+         	console.log(err)
+         })
+         let appSettings = {
+         	hb_cookie: "",
+         	linLinks: [],
+         	macLinks: [],
+         	winLinks: [],
+         	totalLinks: 0,
+         	torrent: false,
+         	linux: false,
+         	mac: false,
+         	windows: false,
+         	subscribed: true,
+         	directory: "",
+         	downloadLock: false,
+         	queueLock: false,
+         }
+         $(function () {
+         	appSettings.hb_cookie = window.location.hash.substr(1)
+         })
+         $("#logout").on("click", function (e) {
+         	e.preventDefault()
+         	doLogout()
+         })
+         function downloadFileFromURL(url) {
+         	ipcRenderer.send("download", {
+         		url: url,
+         		properties: { directory: appSettings.directory },
+         	})
+         
+         }
+         function downloadQueueManager(array, _i, callback) {
+         	if (!_i) {
+         		console.log("DOWNLOAD CALLED")
+         		//array.forEach(function (i, _i) {
+         		appSettings.downloadLock = true
+         		downloadFileFromURL(array[0])
+         		setTimeout(function () {
+         			downloadQueueManager(array, 1, callback)
+         		}, 1000)
+         		//})
+         	} else {
+         		if (appSettings.downloadLock) {
+         			console.log("DOWNLOAD LOCKED")
+         			setTimeout(function () {
+         				downloadQueueManager(array, _i, callback)
+         			}, 1000)
+         		} else {
+         			console.log("DOWNLOAD PROCEEDED")
+         			appSettings.downloadLock = true
+         			if (_i < array.length){
+         				downloadFileFromURL(array[_i])
+         				downloadQueueManager(array, _i + 1, callback)
+         				callback()
+         			} else {
+         				console.log("RETURN")
+         				callback()
+         				setTimeout(function () {
+         					appSettings.linLinks   = []
+         					appSettings.winLinks   = []
+         					appSettings.macLinks   = []
+         					appSettings.queueLock  = false
+         					appSettings.totalLinks = 0
+         					$("#trove-download-total-completed").text("0")
+         					$("#trove-download-total-progress").css('width', 0+'%')
+         					$("#trove-download-progress").css('width', 0+'%')
+         					$("#trove-download-progress-percent").text("0")
+         					$("#trove-download-total").text("0")
+         				}, 500)
+         			}
+         		}
+         	}
+         }
+         function fetchJSON(count, callback) {
+         	base =
+         		"https://www.humblebundle.com/api/v1/trove/chunk?property=popularity&direction=desc&index="
+         
+         	$.get(base + count, function (data) {
+         		if (!Array.isArray(data) || !data.length) {
+         			callback()
+         		} else {
+         			data.forEach(function (download) {
+         				if (download.downloads.windows) {
+         					appSettings.winLinks.push(
+         						`${download.downloads.windows.url.web}|${download.downloads.windows.machine_name}`
+         					)
+         				}
+         				if (download.downloads.mac) {
+         					appSettings.macLinks.push(
+         						`${download.downloads.mac.url.web}|${download.downloads.mac.machine_name}`
+         					)
+         				}
+         				if (download.downloads.linux) {
+         					appSettings.linLinks.push(
+         						`${download.downloads.linux.url.web}|${download.downloads.linux.machine_name}`
+         					)
+         				}
+         			})
+         			fetchJSON(count + 1, callback)
+         		}
+         	})
+         }
+         function genSignedURLFromArray(array, callback) {
+         	arr = [...array]
+         	array = []
+         	arr.forEach(function (url, i) {
+         		url = url.split("|")
+         		filename = url[0]
+         		machine_name = url[1]
+         		if (appSettings.subscribed) {
+         			$.ajax({
+         				url: `https://www.humblebundle.com/api/v1/user/download/sign?filename=${filename}&machine_name=${machine_name}`,
+         				type: "POST",
+         				xhrFields: { withCredentials: true },
+         				data: {
+         					machine_name: machine_name,
+         					filename: filename,
+         				},
+         				async: i != 0,
+         				success: function (data) {
+         					if (appSettings.torrent) {
+         						array.push(data.signed_torrent_url)
+         					} else {
+         						array.push(data.signed_url)
+         					}
+         					if (arr.length === array.length) {
+         						callback(array)
+         					}
+         				},
+         				error: function () {
+         					appSettings.subscribed = false
+         				},
+         			})
+         		}
+         	})
+         }
+         
+         function updateTroveCompleted() {
+         	let current = $("#trove-download-total-completed").text()
+         	let total = $("#trove-download-total").text()
+         
+         	current = +current + 1
+         	$("#trove-download-total-completed").text(current)
+         	$("#trove-download-total-progress").width(
+         		Math.floor((current / total) * 100) + "%"
+         	)
+         }
+         
+         function runDownloadLoop(arr, osType) {
+         	if ( appSettings.queueLock ) {
+         		console.log(osType + ' QUEUE LOCKED')
+         		setTimeout(function() { runDownloadLoop(arr, osType) }, 1000)
+         	} else {
+         			appSettings.queueLock = true
+         			console.log(osType + ' QUEUE PROCESSING')
+         			genSignedURLFromArray(arr, function (
+         					array
+         				) {
+         					$("#trove-log").append(
+         						`Successfully signed ${arr.length} ${osType} files!\n`
+         					)
+         					$("#trove-log").change()
+         					appSettings.totalLinks += array.length
+         					$("#trove-download-total").text(appSettings.totalLinks)
+         					downloadQueueManager(
+         						array,
+         						null,
+         						updateTroveCompleted
+         					)
+         				})
+         			}
+         		}
+         
+         $("#tlin-check").on("change", function () {
+         	appSettings.linux = !appSettings.linux
+         })
+         $("#tmac-check").on("change", function () {
+         	appSettings.mac = !appSettings.mac
+         })
+         $("#twin-check").on("change", function () {
+         	appSettings.windows = !appSettings.windows
+         })
+         $("#ttor-check").on("change", function () {
+         	appSettings.torrent = !appSettings.torrent
+         })
+         function scrollToBottom() {
+         	$(this).scrollTop(this.scrollHeight)
+         }
+         $(".humble-log").change(function () {
+         	scrollToBottom.call(this)
+         })
+         $(".text-link-inactive").on("click", function () {
+         	if ($(this).hasClass("text-link-active")) return
+         	let clicked = this
+         	if ($(".form-active").length) {
+         		$(".form-active")
+         			.slideUp(function () {
+         				$($(clicked).data("target"))
+         					.slideDown()
+         					.addClass("form-active")
+         			})
+         			.removeClass("form-active")
+         	} else {
+         		$($(this).data("target"))
+         			.slideDown()
+         			.addClass("form-active")
+         	}
+         	$(".text-link-active")
+         		.removeClass("text-link-active")
+         		.addClass("text-link-inactive")
+         	$(this)
+         		.removeClass("text-link-inactive")
+         		.addClass("text-link-active")
+         })
+         $("a").on("click", function (e) {
+         	e.preventDefault()
+         	window.location = $(this).attr("href") + window.location.hash
+         })
+         $("#tdir").on("click", function (e) {
+         	e.preventDefault()
+         	const remote = require("electron").remote
+         	const dialog = remote.dialog
+         
+         	var path = dialog
+         		.showOpenDialog({
+         			properties: ["openDirectory"],
+         		})
+         		.then(function (data) {
+         			appSettings.directory = data.filePaths[0]
+         			//Slice the beginning of the string off for output - 25 characters
+         			let new_label = data.filePaths[0]
+         			if (new_label.length > 25) {
+         				let separator = "\\"
+         				if (new_label.slice(0, 1) == "/") separator = "/"
+         				let new_path = new_label
+         					.split("\\")
+         					.pop()
+         					.split("/")
+         					.pop()
+         				new_label = "..." + separator + new_path
+         			}
+         			$("#tdir_label").text(new_label)
+         		})
+         })
+         $("#trove-submit").on("click", function (e) {
+         	e.preventDefault()
+         	if (
+         		!appSettings.linux &&
+         		!appSettings.mac &&
+         		!appSettings.windows
+         	) {
+         		$("#trove-log").append(
+         			"Download failed during setup (no options checked)\n"
+         		)
+         		$("#trove-log").change()
+         		return false
+         	}
+         	if (!appSettings.directory) {
+         		$("#trove-log").append(
+         			"Download failed during setup (no directory specified)\n"
+         		)
+         		$("#trove-log").change()
+         		return false
+         	}
+         	$("#trove-log").append("Starting download...\n")
+         	$("#trove-log").append(
+         		`Download directory: ${appSettings.directory} \n`
+         	)
+         	$("#trove-log").change()
+         	fetchJSON(0, function () {
+         		$("#trove-log").append(
+         			`There are ${
+         				appSettings.linLinks.length +
+         				appSettings.macLinks.length +
+         				appSettings.winLinks.length
+         			} files available:\n`
+         		)
+         		$("#trove-log").append(
+         			`- ${appSettings.linLinks.length} Linux,\n`
+         		)
+         		$("#trove-log").append(
+         			`- ${appSettings.macLinks.length} macOS,\n`
+         		)
+         		$("#trove-log").append(
+         			`- ${appSettings.winLinks.length} Windows\n`
+         		)
+         		$("#trove-log").change()
+         
+         		let totalLinks = 0
+         
+         		if (appSettings.linux && appSettings.subscribed)
+         			runDownloadLoop(appSettings.linLinks, 'Linux')
+         		if (appSettings.mac && appSettings.subscribed)
+         			runDownloadLoop(appSettings.macLinks, 'macOS')
+         		if (appSettings.windows && appSettings.subscribed)
+         			runDownloadLoop(appSettings.winLinks, 'Windows')
+         
+         		if (!appSettings.subscribed) {
+         			$("#trove-log").append(
+         				"Download failed during signing (not subscribed)\n"
+         			)
+         			$("#trove-log").change()
+         		}
+         	})
+         })
+      </script>
+   </body>
+</html>

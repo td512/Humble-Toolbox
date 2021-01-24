@@ -1,0 +1,45 @@
+{
+  "name": "humble-toolbox",
+  "version": "1.0.0",
+  "description": "The next generation of the VB.NET Humble Trove Downloader",
+  "main": "main.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "electron ."
+  },
+  "build": {
+    "appId": "nz.theom.humble.toolbox",
+    "productName": "Humble Toolbox",
+    "copyright": "Copyright © 2020-2021 Theo M. All rights reserved.",
+    "directories": {
+      "output": "build"
+    },
+    "icon": "logo.icns",
+    "win": {
+      "target": "squirrel"
+    },
+    "squirrelWindows": {
+      "iconUrl": "https://data.theom.nz/trove.ico",
+      "loadingGif": "spinner.gif"
+    }
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/td512/Humble-Toolbox.git"
+  },
+  "author": "Theo Morra <theo@theom.nz>",
+  "contributors": [
+    "Elliott Lawrence <elliottlnz@gmail.com>"
+  ],
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/td512/Humble-Toolbox/issues"
+  },
+  "homepage": "https://github.com/td512/Humble-Toolbox#readme",
+  "devDependencies": {
+    "electron": "^10.1.3"
+  },
+  "dependencies": {
+    "electron-dl": "^3.0.2"
+  }
+}

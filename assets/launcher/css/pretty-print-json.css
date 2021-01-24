@@ -1,0 +1,7 @@
+/* pretty-print-json ~ MIT License */
+
+.json-key     { color: var(--danger); }
+.json-string  { color: var(--green); }
+.json-number  { color: var(--blue); }
+.json-boolean { color: var(--info); }
+.json-null    { color: dimgray; }

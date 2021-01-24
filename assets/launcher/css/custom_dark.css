@@ -1,0 +1,95 @@
+* {
+    color: white;
+}
+
+.h1, .h2, .h3, .h4, .h5, .h6, h1, h2, h3, h4, h5, h6 {
+    color: white;
+}
+
+.bg-custom-dark {
+    background-color: var(--primary-3);
+}
+
+body {
+    background-color: var(--primary-3);
+    color: #fff;
+}
+
+.custom-item-bg-dark-transparent {
+    background-color: rgba(255, 255, 255, 0.05) !important;
+}
+
+.rounded-corners-dark {
+    background-color: rgba(255, 255, 255, 0.05) !important;
+    border-radius: 0.3125rem;
+}
+
+.custom-input-dark {
+    background-color: rgba(255, 255, 255, 0.12);
+    border: none;
+    border-bottom: solid 2px rgba(255, 255, 255, 0.5);
+    color: white;
+}
+
+.custom-input-dark::placeholder {
+    color: white;
+    opacity: .5;
+}
+
+.custom-input-dark:focus::placeholder {
+    color: black;
+    opacity: .5;
+}
+
+.custom-input-dark:focus::after {
+    color: white;
+}
+
+.custom-input-dark:disabled {
+    color: black;
+}
+
+.navbar-toggled-show {
+    background-color: #2C2C2C !important;
+}
+
+.dropdown-toggle.arrow-bottom::before {
+    background-color: #2C2C2C;
+    border: none;
+}
+
+.table {
+    background-color: rgba(255, 255, 255, 0.05) !important;
+    color: #FFF;
+}
+
+.custom-input-text-prepend {
+    background-color: rgba(255, 255, 255, 0.05) !important;
+    border: none; 
+    border-right: none !important; 
+    border-bottom: solid 2px rgba(255, 255, 255, 0.5);
+}
+
+.custom-input-text-append {
+    background-color: rgba(255, 255, 255, 0.05) !important;
+    border: none; 
+    border-left: none !important; 
+    border-bottom: solid 2px rgba(255, 255, 255, 0.5);
+}
+
+.pagination-div .page-link {
+    background-color: rgba(255, 255, 255, 0.05) !important;
+}
+
+.pagination-div .page-item:not(.active) > .page-link:hover {
+    background-color: rgba(255, 255, 255, 0.15) !important;
+}
+
+.pagination-div .page-item.active {
+    background-color: rgba(255, 255, 255, 0.05) !important;
+}
+
+.carousel-cell.is-selected {
+    background-color: rgba(255, 255, 255, 0.05) !important;
+    border-radius: 0.3125rem;
+}

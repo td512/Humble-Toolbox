@@ -1,0 +1,19 @@
+body {
+    background-color: #fff;
+}
+
+.custom-item-bg-light {
+    background-color: rgba(0, 0, 0, 0.1);
+}
+
+.custom-item-bg-lighter {
+    background-color: rgba(0, 0, 0, 0.05);
+}
+
+.card-header {
+    background-color: rgba(0, 0, 0, 0.1);
+}
+
+.card-body {
+    background-color: rgba(0, 0, 0, 0.05);
+}
